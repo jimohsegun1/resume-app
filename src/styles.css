@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.app {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.cv {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cv-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack sections vertically */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between items */
+}
+
+.education,
+.experience,
+.skills,
+.contact {
+    border-left: 4px solid #007BFF; /* Blue left border */
+    padding-left: 15px; /* Space after the border */
+}
+
+.education h2,
+.experience h2,
+.skills h2,
+.contact h2 {
+    color: #007BFF; /* Blue color for section headers */
+}

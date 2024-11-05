@@ -1,60 +1,16 @@
 import React from 'react';
-
-const ResumeHeader = () => {
-  return (
-    <header className="text-center mb-8">
-      <h1 className="text-3xl font-bold">Jimoh Segun Jeremiah</h1>
-      <p className="text-gray-600">08137537121 | jimohsegunj@gmail.com</p>
-      <p className="text-gray-600">LinkedIn: linkedin.com/in/jimoh-segun-jeremiah-919b05125</p>
-      <p className="text-gray-600">2 Amborishade Close, Lawanson Surulere, Lagos State</p>
-    </header>
-  );
-};
-
-const ResumeSection = ({ title, children }) => {
-  return (
-    <section className="mb-8">
-      <h2 className="text-2xl font-semibold">{title}</h2>
-      {children}
-    </section>
-  );
-};
-
-const ExperienceItem = ({ title, company, date, children }) => {
-  return (
-    <div className="mb-4">
-      <h3 className="font-bold">{title}</h3>
-      <p className="text-gray-600">{company} | {date}</p>
-      <ul className="list-disc list-inside text-gray-700">{children}</ul>
-    </div>
-  );
-};
-
-const EducationItem = ({ institution, degree, additionalInfo }) => {
-  return (
-    <div className="mb-4">
-      <h3 className="font-bold">{institution}</h3>
-      <p className="text-gray-600">{degree} | {additionalInfo}</p>
-    </div>
-  );
-};
-
-const SkillsItem = ({ skills }) => {
-  return (
-    <ul className="list-disc list-inside text-gray-700">
-      {skills.map((skill, index) => (
-        <li key={index}>{skill}</li>
-      ))}
-    </ul>
-  );
-};
+import ResumeHeader from './ResumeHeader';
+import ResumeSection from './ResumeSection';
+import ExperienceItem from './ExperienceItem';
+import EducationItem from './EducationItem';
+import SkillsItem from './SkillsItem';
 
 const Resume = () => {
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-5xl mx-auto p-8 bg-white shadow-lg rounded-lg">
       <ResumeHeader />
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <ResumeSection title="Professional Summary">
             <p className="text-gray-700">
@@ -65,7 +21,7 @@ const Resume = () => {
           <ResumeSection title="Experience">
             <ExperienceItem title="Machine Learning Data Annotation Specialist" company="Awarri AI" date="2023 - Present">
               <li>Correctly identify, analyze, and collect relevant data from images and videos and provide feedback to further develop the annotation of datasets.</li>
-              <li>Gain in-depth knowledge (through on-the-job training) of using image and data annotation software tools.</li>
+              <li>Gain in-depth knowledge of using image and data annotation software tools.</li>
               <li>Communicate effectively with the team supervisor and fellow team members.</li>
             </ExperienceItem>
             <ExperienceItem title="Admin & Loan Officer" company="Storipod" date="2024">
@@ -109,12 +65,12 @@ const Resume = () => {
               "Excel Essential Training | LinkedIn"
             ]} />
           </ResumeSection>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600">GitHub: <a href="https://github.com/jimohsegun1" className="text-blue-500">github.com/jimohsegun1</a></p>
+          </div>
         </div>
       </div>
-
-      <footer className="mt-8 text-center">
-        <p className="text-gray-600">GitHub: <a href="https://github.com/jimohsegun1" className="text-blue-500">github.com/jimohsegun1</a></p>
-      </footer>
     </div>
   );
 };
